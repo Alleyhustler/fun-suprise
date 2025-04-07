@@ -10,8 +10,8 @@
       margin: 0;
       padding: 0;
       font-family: 'Roboto Mono', monospace;
-      background-color: #372e1a;
-      color: #300505;
+      background-color: #F8F3D9;
+      color: #504B38;
       height: 100%;
       overflow-x: hidden;
     }
@@ -34,51 +34,52 @@
       padding: 0 20px;
       position: relative;
     }
+    
+    /* Header Redesign */
     header {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
       padding: 20px 0;
       position: relative;
+      gap: 15px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
+    }
+    .logo-title-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-grow: 1;
     }
     .logo {
       height: 60px;
       width: auto;
-      order: 1;
     }
     .site-title {
       font-family: 'Orbitron', sans-serif;
       font-size: 32px;
       font-weight: bold;
-      background-color: rgba(36, 2, 11, 0.1);
+      background-color: rgba(185, 178, 138, 0.3);
       padding: 15px 25px;
       border-radius: 8px;
-      box-shadow: 0 0 20px rgba(37, 3, 3, 0.3);
-      text-align: center;
-      color: #300505;
+      box-shadow: 0 0 20px rgba(80, 75, 56, 0.3);
+      color: #504B38;
       text-transform: uppercase;
       letter-spacing: 3px;
-      order: 2;
-      flex-grow: 1;
-      margin: 0 20px;
+      margin: 0;
     }
     .site-title a {
-      color: #300505;
+      color: #504B38;
       text-decoration: none;
-      text-shadow: 0 0 10px rgba(36, 2, 11, 0.1);
+      text-shadow: 0 0 10px rgba(80, 75, 56, 0.1);
     }
-    .site-subtitle {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 18px;
-      text-align: center;
-      color: #300505;
-      margin: 20px 0 20px;
-      width: 100%;
-      letter-spacing: 1px;
-    }
-    /* Wallet Button */
     #wallet-btn {
       font-family: 'Roboto Mono', monospace;
       font-size: 16px;
@@ -89,40 +90,41 @@
       border-radius: 5px;
       cursor: pointer;
       transition: all 0.3s;
-      box-shadow: 0 0 15px rgba(36, 2, 11, 0.1);
-      background-color: #361515;
-      color: #fff;
-      order: 3;
+      box-shadow: 0 0 15px rgba(80, 75, 56, 0.1);
+      background-color: #B9B28A;
+      color: #F8F3D9;
     }
     #wallet-btn:hover {
-      background-color: #361515;
+      background-color: #504B38;
     }
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin: 10px 0;
-      width: 100%;
+    .site-subtitle {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 18px;
+      text-align: center;
+      color: #504B38;
+      margin: 0;
+      letter-spacing: 1px;
+      max-width: 800px;
     }
-    .social-links a {
-      text-decoration: none;
-      color: #300505;
-      font-size: 24px;
-      transition: color 0.3s;
-    }
-    .social-links a:hover {
-      color: #300605;
-    }
+    
+    /* Main Content */
     main {
-      padding: 20px 0 100px;
+      padding: 30px 0 100px;
       position: relative;
       z-index: 1;
     }
-    .buttons-container {
+    
+    /* Navigation and Filters */
+    .navigation-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .filters-container {
       display: flex;
       justify-content: center;
       gap: 15px;
-      margin-bottom: 20px;
       flex-wrap: wrap;
     }
     .button {
@@ -135,68 +137,79 @@
       border-radius: 5px;
       cursor: pointer;
       transition: all 0.3s;
-      box-shadow: 0 0 15px rgba(36, 2, 11, 0.1);
+      box-shadow: 0 0 15px rgba(80, 75, 56, 0.1);
     }
     .button-primary {
-      background-color: #361515;
-      color: #ffffff;
+      background-color: #504B38;
+      color: #F8F3D9;
     }
     .button-primary:hover {
-      background-color: #300505;
+      background-color: #B9B28A;
     }
     .button-secondary {
       background-color: transparent;
-      color: #300505;
-      border: 2px solid #300505;
+      color: #504B38;
+      border: 2px solid #504B38;
     }
     .button-secondary:hover {
-      background-color: #300505;
-      color: #361515;
+      background-color: #504B38;
+      color: #F8F3D9;
     }
-    .links-container {
+    .social-links-container {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-bottom: 30px;
       flex-wrap: wrap;
     }
     .link {
       display: flex;
       align-items: center;
       gap: 8px;
-      background-color: rgba(36, 2, 11, 0.1);
+      background-color: rgba(185, 178, 138, 0.2);
       padding: 12px 20px;
       border-radius: 5px;
-      border: 1px solid rgba(36, 2, 11, 0.1);
-      color: #300505;
+      border: 1px solid rgba(80, 75, 56, 0.1);
+      color: #504B38;
       text-decoration: none;
       transition: all 0.3s;
     }
     .link:hover {
-      background-color: rgba(36, 2, 11, 0.2);
+      background-color: rgba(185, 178, 138, 0.4);
+    }
+    
+    /* Research Cards Grid */
+    .content-section {
+      margin-top: 40px;
+    }
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 24px;
+      color: #504B38;
+      margin-bottom: 20px;
+      text-align: center;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 25px;
-      padding: 20px 0;
+      margin-bottom: 40px;
     }
     .research-card {
-      background-color: rgba(0, 255, 0, 0.05);
+      background-color: #EBE5C2;
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 0 0 20px rgba(36, 2, 11, 0.1);
+      box-shadow: 0 0 20px rgba(80, 75, 56, 0.1);
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #300505;
+      color: #504B38;
       text-decoration: none;
       transition: transform 0.3s, box-shadow 0.3s;
       min-height: 400px;
     }
     .research-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 30px rgba(36, 2, 11, 0.2);
+      box-shadow: 0 0 30px rgba(80, 75, 56, 0.2);
     }
     .research-card img {
       width: 100%;
@@ -204,13 +217,13 @@
       border-radius: 5px;
       margin-bottom: 15px;
       object-fit: cover;
-      filter: hue-rotate(180deg) brightness(0.8) contrast(1.2);
+      filter: sepia(0.2) contrast(1.1);
     }
     .research-card h2 {
       font-family: 'Orbitron', sans-serif;
       font-size: 22px;
       margin: 10px 0;
-      color: #300505;
+      color: #504B38;
       text-align: center;
     }
     .research-card .marketcap {
@@ -224,7 +237,7 @@
       justify-content: space-between;
       width: 100%;
       font-size: 12px;
-      color: #300605;
+      color: #B9B28A;
       margin-bottom: 15px;
     }
     .research-card .description {
@@ -242,14 +255,15 @@
       width: 100%;
     }
     .research-card.selected {
-      background-color: rgba(0, 255, 0, 0.1);
-      border: 2px solid #300505;
+      background-color: #B9B28A;
+      border: 2px solid #504B38;
     }
     .research-card.upcoming-placeholder {
-      background-color: rgba(0, 255, 0, 0.02);
-      border: 1px dashed #300605;
+      background-color: rgba(235, 229, 194, 0.5);
+      border: 1px dashed #B9B28A;
       opacity: 0.8;
     }
+    
     /* Game Explanation Popup */
     .game-popup {
       position: fixed;
@@ -258,12 +272,12 @@
       transform: translate(-50%, -50%);
       width: 90%;
       max-width: 500px;
-      background-color: rgba(36, 2, 11, 0.95);
+      background-color: #EBE5C2;
       border-radius: 8px;
       padding: 25px;
-      box-shadow: 0 0 30px rgba(36, 2, 11, 0.3);
+      box-shadow: 0 0 30px rgba(80, 75, 56, 0.3);
       z-index: 1000;
-      color: #372e1a;
+      color: #504B38;
       max-height: 90vh;
       overflow-y: auto;
     }
@@ -271,8 +285,8 @@
       font-family: 'Orbitron', sans-serif;
       font-size: 22px;
       margin-bottom: 15px;
-      color: #372e1a;
-      border-bottom: 1px solid #372e1a;
+      color: #504B38;
+      border-bottom: 1px solid #B9B28A;
       padding-bottom: 10px;
     }
     .close-popup {
@@ -281,7 +295,7 @@
       right: 15px;
       background: none;
       border: none;
-      color: #372e1a;
+      color: #504B38;
       font-size: 24px;
       cursor: pointer;
     }
@@ -289,8 +303,8 @@
       position: fixed;
       right: 20px;
       bottom: 20px;
-      background-color: #300505;
-      color: #372e1a;
+      background-color: #504B38;
+      color: #F8F3D9;
       border: none;
       border-radius: 50%;
       width: 50px;
@@ -298,7 +312,7 @@
       font-size: 20px;
       cursor: pointer;
       z-index: 999;
-      box-shadow: 0 0 15px rgba(36, 2, 11, 0.3);
+      box-shadow: 0 0 15px rgba(80, 75, 56, 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -310,48 +324,40 @@
       transform: translateX(-50%);
       padding: 15px 30px;
       font-size: 18px;
-      background-color: #361515;
-      color: white;
+      background-color: #504B38;
+      color: #F8F3D9;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: all 0.3s;
       z-index: 100;
-      box-shadow: 0 0 20px rgba(36, 2, 11, 0.3);
+      box-shadow: 0 0 20px rgba(80, 75, 56, 0.3);
     }
     #confirm-selection:hover {
-      background-color: #361515;
+      background-color: #B9B28A;
       transform: translateX(-50%) scale(1.05);
     }
+    
+    /* Responsive Design */
     @media (max-width: 768px) {
-      header {
-        flex-direction: row;
-        justify-content: center;
+      .header-top {
+        flex-direction: column;
+        align-items: center;
       }
-      #confirm-selection {
-        width: 90%;
-        max-width: 300px;
-        padding: 12px 20px;
-        font-size: 16px;
+      .logo-title-container {
+        flex-direction: column;
+        text-align: center;
       }
       .site-title {
-        order: 1;
-        width: 100%;
-        margin: 10px 0;
         font-size: 26px;
+        padding: 10px 20px;
       }
       .site-subtitle {
         font-size: 16px;
-        margin: -5px 0 15px;
-      }
-      .logo {
-        order: 2;
-        margin: 0 auto;
       }
       #wallet-btn {
-        order: 3;
         width: 100%;
-        margin-top: 10px;
+        max-width: 300px;
       }
       .grid {
         grid-template-columns: 1fr;
@@ -360,32 +366,27 @@
       .research-card {
         min-height: auto;
       }
-      .links-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .link {
-        width: 100%;
-        justify-content: center;
+      #confirm-selection {
+        width: 90%;
+        max-width: 300px;
+        padding: 12px 20px;
+        font-size: 16px;
       }
     }
     @media (max-width: 480px) {
       .site-title {
         font-size: 22px;
-        padding: 10px 15px;
       }
       .site-subtitle {
         font-size: 14px;
-      }
-      .buttons-container {
-        gap: 10px;
       }
       .button {
         padding: 10px 15px;
         font-size: 14px;
       }
-      .research-card {
-        padding: 15px;
+      .link {
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
@@ -393,227 +394,296 @@
 <body>
   <div class="background"></div>
   <header class="container">
-    <img src="Pump_fun_logo (3) (1).png" alt="Beyond Comprehension Logo" class="logo">
-    <h1 class="site-title">
-      <a href="/">Fun Surprise.</a>
-    </h1>
-    <button id="wallet-btn">Connect Phantom Wallet</button>
+    <div class="header-top">
+      <div class="logo-title-container">
+        <img src="Pump_fun_logo (3) (1).png" alt="Beyond Comprehension Logo" class="logo">
+        <h1 class="site-title">
+          <a href="/">Rewards Hub.</a>
+        </h1>
+      </div>
+      <button id="wallet-btn">Connect Phantom Wallet</button>
+    </div>
+    <p class="site-subtitle">SELECT AND GET REWARDED</p>
   </header>
+  
   <main class="container">
-    <div class="site-subtitle">SELECT AND GET REWARDED</div>
-    
-    <div class="buttons-container">
-      <button class="button button-primary">Believe • 5</button>
-      <button class="button button-secondary">Upcoming • 5</button>
-      <button class="button button-secondary">Contract Address HERE</button>
-    </div>
-    <div class="links-container">
-      <a href="https://x.com/fun_suprise_" class="link">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="#300505">
-          <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path>
-        </svg>
-        Classified TWITTER
-      </a>
-      <a href="https://t.me/funsuprise" class="link">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#300505" stroke-width="2">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-          <line x1="12" y1="17" x2="12.01" y2="17"></line>
-        </svg>
-        Protocols TG
-      </a>
-      <a href="https://pump.fun/profile/DiEQz2ZpwNBVRspPWnPjZJQEpjyAJGKKDJGngw5uQSrz" class="link">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#300505" stroke-width="2">
-          <line x1="12" y1="5" x2="12" y2="19"></line>
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-        </svg>
-        BUY $SUPRISE
-      </a>
-    </div>
-    
-    <div class="grid">
-      <!-- Research Card 1 -->
-      <div class="research-card" id="card1">
-        <img src="Pump_fun_logo (3) (1).png" alt="PUMPME-237 Research">
-        <h2>PUMPME-237 <span style="color: #300605;">$SNACKS</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">SOL 169,452.23</span>
-          <span style="color: #300505;">1.5%</span>
-        </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
-        </div>
-        <p class="description">Advanced memecoin research with breakthrough potential in making degens rich and bored apes jealous.</p>
-        <div class="select-container">
-          <a href="https://pump.fun/" class="button button-primary" target="_blank" rel="noopener noreferrer">Access Lab</a>
-          <button class="button button-secondary" onclick="selectCard('card1')">Select</button>
-        </div>
+    <div class="navigation-section">
+      <div class="filters-container">
+        <button class="button button-primary">Believe • 5</button>
+        <button class="button button-secondary">Upcoming • 5</button>
+        <button class="button button-secondary">Contract Address HERE</button>
       </div>
       
-      <!-- Research Card 2 -->
-      <div class="research-card" id="card2">
-        <img src="Pump_fun_logo (3) (1).png" alt="BONKOLOGY-999 Research">
-        <h2>BONKOLOGY-999 <span style="color: #300605;">$BONK2</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">SOL 200,000.00</span>
-          <span style="color: #300505;">2.0%</span>
-        </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
-        </div>
-        <p class="description">Interstellar memecoin initiative exploring how many zeros we can remove before the next bear market.</p>
-        <div class="select-container">
-          <a href="https://pump.fun/" class="button button-primary" target="_blank" rel="noopener noreferrer">Access Lab</a>
-          <button class="button button-secondary" onclick="selectCard('card2')">Select</button>
-        </div>
+      <div class="social-links-container">
+        <a href="https://x.com/fun_suprise_" class="link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#300505">
+            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path>
+          </svg>
+          Classified TWITTER
+        </a>
+        <a href="https://t.me/funsuprise" class="link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#300505" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          Protocols TG
+        </a>
+        <a href="https://pump.fun/profile/DiEQz2ZpwNBVRspPWnPjZJQEpjyAJGKKDJGngw5uQSrz" class="link">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#300505" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          BUY $REWARDS
+        </a>
       </div>
-  
-      <!-- Research Card 3 -->
-      <div class="research-card" id="card3">
-        <img src="Pump_fun_logo (3) (1).png" alt="DEXSCREAM-321 Research">
-        <h2>DEXSCREAM-321 <span style="color: #300605;">$SCREAM</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">SOL 120,000.00</span>
-          <span style="color: #300505;">1.8%</span>
+    </div>
+    
+    <div class="content-section">
+      <h2 class="section-title">Active Research Projects</h2>
+      <div class="grid">
+        <!-- Research Card 1 -->
+        <div class="research-card" id="card1">
+          <img src="Pump_fun_logo (3) (1).png" alt="PUMPME-237 Research">
+          <h2>PUMPME-237 <span style="color: #300605;">$SNACKS</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">SOL 5</span>
+            <span style="color: #300505;">1.5%</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Advanced memecoin research with breakthrough potential in making degens rich and bored apes jealous.</p>
+          <div class="select-container">
+            <a href="https://pump.fun/profile/34eXMHhVX6ZJ2QQH5PSER8Su9C6C5R8J6mkbU6rmhUso" class="button button-primary" target="_blank" rel="noopener noreferrer">Buy $REWARDS</a>
+            <button class="button button-secondary" onclick="selectCard('card1')">Select</button>
+          </div>
         </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
+        
+        <!-- Research Card 2 -->
+        <div class="research-card" id="card2">
+          <img src="Pump_fun_logo (3) (1).png" alt="BONKOLOGY-999 Research">
+          <h2>BONKOLOGY-999 <span style="color: #300605;">$BONK2</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">SOL 8</span>
+            <span style="color: #300505;">2.0%</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Interstellar memecoin initiative exploring how many zeros we can remove before the next bear market.</p>
+          <div class="select-container">
+            <a href="https://pump.fun/profile/34eXMHhVX6ZJ2QQH5PSER8Su9C6C5R8J6mkbU6rmhUso" class="button button-primary" target="_blank" rel="noopener noreferrer">Buy $REWARDS</a>
+            <button class="button button-secondary" onclick="selectCard('card2')">Select</button>
+          </div>
         </div>
-        <p class="description">Cutting-edge chart research with classified applications in making your portfolio go 📈 then 📉 then 🤡.</p>
-        <div class="select-container">
-          <a href="https://pump.fun/" class="button button-primary" target="_blank" rel="noopener noreferrer">Access Lab</a>
-          <button class="button button-secondary" onclick="selectCard('card3')">Select</button>
+        
+        <!-- Research Card 3 -->
+        <div class="research-card" id="card3">
+          <img src="Pump_fun_logo (3) (1).png" alt="DEXSCREAM-321 Research">
+          <h2>DEXSCREAM-321 <span style="color: #300605;">$SCREAM</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">SOL 3</span>
+            <span style="color: #300505;">1.8%</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Cutting-edge chart research with classified applications in making your portfolio go 📈 then 📉 then 🤡.</p>
+          <div class="select-container">
+            <a href="https://pump.fun/profile/34eXMHhVX6ZJ2QQH5PSER8Su9C6C5R8J6mkbU6rmhUso" class="button button-primary" target="_blank" rel="noopener noreferrer">Buy $REWARDS</a>
+            <button class="button button-secondary" onclick="selectCard('card3')">Select</button>
+          </div>
         </div>
-      </div>
-  
-      <!-- Research Card 4 -->
-      <div class="research-card" id="card4">
-        <img src="Pump_fun_logo (3) (1).png" alt="WENMOON-42 Research">
-        <h2>WENMOON-42 <span style="color: #300605;">$WEN</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">SOL 180,000.00</span>
-          <span style="color: #300505;">2.2%</span>
+        
+        <!-- Research Card 4 -->
+        <div class="research-card" id="card4">
+          <img src="Pump_fun_logo (3) (1).png" alt="WENMOON-42 Research">
+          <h2>WENMOON-42 <span style="color: #300605;">$WEN</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">SOL 6</span>
+            <span style="color: #300505;">2.2%</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Revolutionary moon research project with potential to redefine your hopium levels and Twitter feed.</p>
+          <div class="select-container">
+            <a href="https://pump.fun/profile/34eXMHhVX6ZJ2QQH5PSER8Su9C6C5R8J6mkbU6rmhUso" class="button button-primary" target="_blank" rel="noopener noreferrer">Buy $REWARDS</a>
+            <button class="button button-secondary" onclick="selectCard('card4')">Select</button>
+          </div>
         </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
+        
+        <div class="research-card" id="card4">
+          <img src="Pump_fun_logo (3) (1).png" alt="WENMOON-42 Research">
+          <h2>WONT RUG <span style="color: #300605;">$RUG</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">SOL 7</span>
+            <span style="color: #300505;">2.2%</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Revolutionary moon research project with potential to redefine your hopium levels and Twitter feed.</p>
+          <div class="select-container">
+            <a href="https://pump.fun/profile/34eXMHhVX6ZJ2QQH5PSER8Su9C6C5R8J6mkbU6rmhUso" class="button button-primary" target="_blank" rel="noopener noreferrer">Buy $REWARDS</a>
+            <button class="button button-secondary" onclick="selectCard('card4')">Select</button>
+          </div>
         </div>
-        <p class="description">Revolutionary moon research project with potential to redefine your hopium levels and Twitter feed.</p>
-        <div class="select-container">
-          <a href="https://pump.fun/" class="button button-primary" target="_blank" rel="noopener noreferrer">Access Lab</a>
-          <button class="button button-secondary" onclick="selectCard('card4')">Select</button>
+        
+        <div class="research-card" id="card4">
+          <img src="Pump_fun_logo (3) (1).png" alt="WENMOON-42 Research">
+          <h2>ALLAN ROBBED <span style="color: #300605;">$HARD</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">SOL 4</span>
+            <span style="color: #300505;">2.2%</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Revolutionary moon research project with potential to redefine your hopium levels and Twitter feed.</p>
+          <div class="select-container">
+            <a href="https://pump.fun/profile/34eXMHhVX6ZJ2QQH5PSER8Su9C6C5R8J6mkbU6rmhUso" class="button button-primary" target="_blank" rel="noopener noreferrer">Buy $REWARDS</a>
+            <button class="button button-secondary" onclick="selectCard('card4')">Select</button>
+          </div>
         </div>
-      </div>
+        
+        <div class="research-card" id="card4">
+          <img src="Pump_fun_logo (3) (1).png" alt="WENMOON-42 Research">
+          <h2>WFDA <span style="color: #300605;">$LOL</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">SOL 2</span>
+            <span style="color: #300505;">2.2%</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Revolutionary moon research project with potential to redefine your hopium levels and Twitter feed.</p>
+          <div class="select-container">
+            <a href="https://pump.fun/" class="button button-primary" target="_blank" rel="noopener noreferrer">Buy $REWARDS</a>
+            <button class="button button-secondary" onclick="selectCard('card4')">Select</button>
+          </div>
+        </div>
+        
+        <!-- Research Card 5 -->
+        <div class="research-card" id="card5">
+          <img src="Pump_fun_logo (3) (1).png" alt="RUGGABLE-7 Research">
+          <h2>RUGGABLE-7 <span style="color: #300605;">$RUGME</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">SOL 1</span>
+            <span style="color: #300505;">1.9%</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Quantum rugpull research with applications in making your SOL disappear faster than you can say "DYOR".</p>
+          <div class="select-container">
+            <a href="https://pump.fun/" class="button button-primary" target="_blank" rel="noopener noreferrer">Buy $REWARDS</a>
+            <button class="button button-secondary" onclick="selectCard('card5')">Select</button>
+          </div>
+        </div>
+      </div> <!-- This closes the Active Research Projects grid -->
+
+        
       
-      <!-- Research Card 5 -->
-      <div class="research-card" id="card5">
-        <img src="Pump_fun_logo (3) (1).png" alt="RUGGABLE-7 Research">
-        <h2>RUGGABLE-7 <span style="color: #300605;">$RUGME</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">SOL 150,000.00</span>
-          <span style="color: #300505;">1.9%</span>
+      <h2 class="section-title">Upcoming Research Projects</h2>
+      <div class="grid">
+        <!-- Upcoming Card 6 -->
+        <div class="research-card upcoming-placeholder" id="card6">
+          <h2>PUMPFUN-5823 <span style="color: #300605;">$TBA</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">$ 0.00</span>
+            <span style="color: #300505;">N/A</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Classified memecoin project launching soon. Will it pump or dump? Yes.</p>
+          <div class="select-container">
+            <h3>NOT LIVE</h3>
+            <button class="button button-secondary" onclick="selectCard('card6')">Select</button>
+          </div>
         </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
+    
+        <!-- Upcoming Card 7 -->
+        <div class="research-card upcoming-placeholder" id="card7">
+          <h2>SOLANA-12 <span style="color: #300605;">$SOLANA</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">$ 0.00</span>
+            <span style="color: #300505;">N/A</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Research into how many memecoins can dance on the head of a Solana validator.</p>
+          <div class="select-container">
+            <h3>NOT LIVE</h3>
+            <button class="button button-secondary" onclick="selectCard('card7')">Select</button>
+          </div>
         </div>
-        <p class="description">Quantum rugpull research with applications in making your SOL disappear faster than you can say "DYOR".</p>
-        <div class="select-container">
-          <a href="https://pump.fun/" class="button button-primary" target="_blank" rel="noopener noreferrer">Access Lab</a>
-          <button class="button button-secondary" onclick="selectCard('card5')">Select</button>
+    
+        <!-- Upcoming Card 8 -->
+        <div class="research-card upcoming-placeholder" id="card8">
+          <h2>DEXSCREEN-88 <span style="color: #300605;">$CHART</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">$ 0.00</span>
+            <span style="color: #300505;">N/A</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Top-secret research into why all your charts look bullish at 3AM but dump by breakfast.</p>
+          <div class="select-container">
+            <h3>NOT LIVE</h3>
+            <button class="button button-secondary" onclick="selectCard('card8')">Select</button>
+          </div>
         </div>
-      </div>
-  
-      <!-- Upcoming Card 6 -->
-      <div class="research-card upcoming-placeholder" id="card6">
-        <h2>PUMPFUN-5823 <span style="color: #300605;">$TBA</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">$ 0.00</span>
-          <span style="color: #300505;">N/A</span>
+    
+        <!-- Upcoming Card 9 -->
+        <div class="research-card upcoming-placeholder" id="card9">
+          <h2>MEMELORD-99 <span style="color: #300605;">$MEME</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">$ 0.00</span>
+            <span style="color: #300505;">N/A</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Experimental research into whether memes actually have intrinsic value (spoiler: no).</p>
+          <div class="select-container">
+            <h3>NOT LIVE</h3>
+            <button class="button button-secondary" onclick="selectCard('card9')">Select</button>
+          </div>
         </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
-        </div>
-        <p class="description">Classified memecoin project launching soon. Will it pump or dump? Yes.</p>
-        <div class="select-container">
-          <h3>NOT LIVE</h3>
-          <button class="button button-secondary" onclick="selectCard('card6')">Select</button>
-        </div>
-      </div>
-  
-      <!-- Upcoming Card 7 -->
-      <div class="research-card upcoming-placeholder" id="card7">
-        <h2>SOLANA-12 <span style="color: #300605;">$SOLANA</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">$ 0.00</span>
-          <span style="color: #300505;">N/A</span>
-        </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
-        </div>
-        <p class="description">Research into how many memecoins can dance on the head of a Solana validator.</p>
-        <div class="select-container">
-          <h3>NOT LIVE</h3>
-          <button class="button button-secondary" onclick="selectCard('card7')">Select</button>
-        </div>
-      </div>
-  
-      <!-- Upcoming Card 8 -->
-      <div class="research-card upcoming-placeholder" id="card8">
-        <h2>DEXSCREEN-88 <span style="color: #300605;">$CHART</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">$ 0.00</span>
-          <span style="color: #300505;">N/A</span>
-        </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
-        </div>
-        <p class="description">Top-secret research into why all your charts look bullish at 3AM but dump by breakfast.</p>
-        <div class="select-container">
-          <h3>NOT LIVE</h3>
-          <button class="button button-secondary" onclick="selectCard('card8')">Select</button>
-        </div>
-      </div>
-  
-      <!-- Upcoming Card 9 -->
-      <div class="research-card upcoming-placeholder" id="card9">
-        <h2>MEMELORD-99 <span style="color: #300605;">$MEME</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">$ 0.00</span>
-          <span style="color: #300505;">N/A</span>
-        </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
-        </div>
-        <p class="description">Experimental research into whether memes actually have intrinsic value (spoiler: no).</p>
-        <div class="select-container">
-          <h3>NOT LIVE</h3>
-          <button class="button button-secondary" onclick="selectCard('card9')">Select</button>
-        </div>
-      </div>
-  
-      <!-- Upcoming Card 10 -->
-      <div class="research-card upcoming-placeholder" id="card10">
-        <h2>WAGMI-1 <span style="color: #300605;">$COPE</span></h2>
-        <div class="marketcap">
-          <span style="color: #300605;">$ 0.00</span>
-          <span style="color: #300505;">N/A</span>
-        </div>
-        <div class="labels">
-          <span>VALUE</span>
-          <span>ENRICHMENT</span>
-        </div>
-        <p class="description">Temporal research initiative exploring how long you can hold bags before coping on Twitter.</p>
-        <div class="select-container">
-          <h3>NOT LIVE</h3>
-          <button class="button button-secondary" onclick="selectCard('card10')">Select</button>
+    
+        <!-- Upcoming Card 10 -->
+        <div class="research-card upcoming-placeholder" id="card10">
+          <h2>WAGMI-1 <span style="color: #300605;">$COPE</span></h2>
+          <div class="marketcap">
+            <span style="color: #300605;">$ 0.00</span>
+            <span style="color: #300505;">N/A</span>
+          </div>
+          <div class="labels">
+            <span>VALUE</span>
+            <span>ENRICHMENT</span>
+          </div>
+          <p class="description">Temporal research initiative exploring how long you can hold bags before coping on Twitter.</p>
+          <div class="select-container">
+            <h3>NOT LIVE</h3>
+            <button class="button button-secondary" onclick="selectCard('card10')">Select</button>
+          </div>
         </div>
       </div>
     </div>
